@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1{
+    font-weight: 100;
+}
+
+@keyframes spinloader{
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+.loading{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loader{
+        animation: spinloader 1.5s infinite;
+        height: 15vh;
+    }
+}
+
+.page.home{
+    .content{
+        background-image: url("../public/images/dungeon_demoimg.jpg");
+        background-size: cover;
+    }
+}
+
+.page.about{
+    box-sizing: border-box;
+    padding: 4vh 4vw;
+    font-size: 1.5rem;
+
+    *{
+        font-family: "Merriweather", sans-serif;
+    }
+
+    h1{
+        margin: 4vh auto;
+        text-align: center;
+    }
+}
+
+.page.download{
+    h1{
+        margin: 4vh auto;
+    }
+}
+
+
+
+.cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    .card{
+        width: 30%;
+        height: 35vh;
+        box-sizing: border-box;
+        margin: 2vh 0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 2vh 2vw;
+
+        .card-title{
+            box-sizing: border-box;
+            padding: 1vh 2vw;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .card-body{
+            padding: 1vh 1vw;
+        }
+    }
+}
+
+.w-30{
+    width: 30%;
+}
+
+.w-70{
+    width: 70%;
+}
+
+.w-100{
+    width: 100%;
+}
+
+header.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 2vh 4vw;
+    height: 10vh;
+    background-color: #221f1f;
+
+    .logo{
+        height: 80%;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+    .menu-link{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+header.header-home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 2vh 4vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    .logo{
+        height: 80%;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+    .menu-link{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #221f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        height: 70%;
+    }
+}
+
+.footer-home{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img{
+        height: 70%;
+    }
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex.ai-center{
+    align-items: center;
+}
+
+.flex.jc-center{
+    justify-content: center;
+}
+
+.flex.fx-wrap{
+    flex-wrap: wrap;
+}
+
+.flex.ac-center{
+    align-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-dark{
+    background-color: #221f1f;
+    color: #fff;
+
+    *{
+        color: #fff;
+    }
+}
+
+a.btn{
+    background-color: #fff;
+    color: #000;
+    padding: 2vh 2vw;
+    text-decoration: none;
+}
+
+a.btn.btn-large{
+    font-size: 2rem;
+    padding: 4vh 4vw;
+}
+
+a.btn.btn-dark{
+    background-color: #221f1f;
+    color: #fff;
+}
+
+a.btn.btn-disabled{
+    background-color: #aca8a8;
+    color: #000;
+    pointer-events: none;
+}

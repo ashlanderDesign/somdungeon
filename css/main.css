@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+@-webkit-keyframes spinloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+.loading {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loading .loader {
+  -webkit-animation: spinloader 1.5s infinite;
+          animation: spinloader 1.5s infinite;
+  height: 15vh;
+}
+
+.page.home .content {
+  background-image: url("../public/images/dungeon_demoimg.jpg");
+  background-size: cover;
+}
+
+.page.about {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4vh 4vw;
+  font-size: 1.5rem;
+}
+
+.page.about * {
+  font-family: "Merriweather", sans-serif;
+}
+
+.page.about h1 {
+  margin: 4vh auto;
+  text-align: center;
+}
+
+.page.download h1 {
+  margin: 4vh auto;
+}
+
+.cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cards .card {
+  width: 30%;
+  height: 35vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 2vh 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2vh 2vw;
+}
+
+.cards .card .card-title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1vh 2vw;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.cards .card .card-body {
+  padding: 1vh 1vw;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+header.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2vh 4vw;
+  height: 10vh;
+  background-color: #221f1f;
+}
+
+header.header .logo {
+  height: 80%;
+}
+
+header.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 30%;
+}
+
+header.header .menu-link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header.header-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2vh 4vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+header.header-home .logo {
+  height: 80%;
+}
+
+header.header-home .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 30%;
+}
+
+header.header-home .menu-link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #221f1f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer img {
+  height: 70%;
+}
+
+.footer-home {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-home img {
+  height: 70%;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex.ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex.jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex.fx-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex.ac-center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-dark {
+  background-color: #221f1f;
+  color: #fff;
+}
+
+.bg-dark * {
+  color: #fff;
+}
+
+a.btn {
+  background-color: #fff;
+  color: #000;
+  padding: 2vh 2vw;
+  text-decoration: none;
+}
+
+a.btn.btn-large {
+  font-size: 2rem;
+  padding: 4vh 4vw;
+}
+
+a.btn.btn-dark {
+  background-color: #221f1f;
+  color: #fff;
+}
+
+a.btn.btn-disabled {
+  background-color: #aca8a8;
+  color: #000;
+  pointer-events: none;
+}
+/*# sourceMappingURL=main.css.map */

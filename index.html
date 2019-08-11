@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>DUNGEON</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="loading" v-if='loading == true'><img src="public/com/loader_icon.png" alt="" class="loader"></div>
+        <header class="header-home" v-if="page == 'home'">
+            <img src="public/com/logo.png" alt="" class="logo">
+            <nav class="menu">
+                <a href="#home" class="menu-link" @click='page = "home"'>Главная</a>
+                <a href="#about" class="menu-link" @click='page = "about"'>Об игре</a>
+                <a href="#download" class="menu-link" @click='page = "download"'>Загрузить</a>
+                <a href="#support" class="menu-link" @click='page = "support"'>Поддержать</a>
+            </nav>
+        </header>
+        <header class="header" v-if='page != "home"'>
+            <img src="public/com/logo.png" alt="" class="logo">
+            <nav class="menu">
+                <a href="#home" class="menu-link" @click='page = "home"'>Главная</a>
+                <a href="#about" class="menu-link" @click='page = "about"'>Об игре</a>
+                <a href="#download" class="menu-link" @click='page = "download"'>Загрузить</a>
+                <a href="#support" class="menu-link" @click='page = "support"'>Поддержать</a>
+            </nav>
+        </header>
+        <div class="page home" v-if='page == "home"'>
+            <div class="content bg-dark flex ai-center jc-center">
+                <a href="#" class="btn btn-white btn-large" @click='page = "about"'>Войти в
+                    подземелье</a>
+            </div>
+        </div>
+        <div class="page about" v-if='page == "about"'>
+            <p>
+                <b>Stories of Metherlest: Dungeon</b> - трёхмерная игра в жанре dungeon crawl с элементами ролевой игры
+                в которой главному герою предстоит пробраться через множество комнат и лабиринтов, наполненных опасными
+                существами, чтобы найти ответ на вопрос, волновавший поколения людей - куда исчезли боги этого мира.
+            </p>
+            <h1>История мира</h1>
+            <p>
+                В древние времена, еще когда разумные расы только начинали вести записи о ходе истории, существовали
+                Божества.
+                Это были существа, даровавшие миру жизнь и магию. Сколько их было не знал никто. Но они награждали тех,
+                кто поклоняется им.
+                <br>
+                <br>
+                Однажды, в неизвестный год неизвестного столетия Боги перестали обращать внимание на своих
+                последователей и простых смертных.
+                Среди всех рас прошла волна ужаса и хаоса. Люди поняли, что Богов больше нет.
+                <br><br>
+                Спустя некоторое время искатели приключений нашли в лесной глуши пещеру. Она оказалась подземельем с
+                неввобразимым количеством лабиринтов, простиравшихся, казалось, до самого центра планеты. Разнообразие
+                монстров и добычи в ней, а также постоянное восполнение их, навело людей на мысль, что это не просто
+                подземелье. Оно как-то связано с покинувшими мир Богами.
+                <br><br>
+                Никому еще не удавалось достичь самого дна этого зловещего подземелья долгие годы, но возможно ты,
+                герой, сможешь свершить этот подвиг и узнать, что же случилось с Богами.
+            </p>
+            <h1>Особенности</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-title">Свобода отыгрыша</div>
+                    <div class="card-body">Вы не ограничены классами и специальностями - используйте любую экипировку
+                        подходящего уровня и развивайте навыки по мере их использования</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Огромное подземелье</div>
+                    <div class="card-body">Погрузитесь в опасное путешествие по бесчисленным коридорам Подземелья,
+                        побеждая врагов и забирая добычу</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Интересные и разнообразные задания</div>
+                    <div class="card-body">Множество проработанных вручную заданий, от поисков предметов, до целого
+                        детективного расследования</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Разгадай тайну Мезерлеста</div>
+                    <div class="card-body">Куда ушли Боги? Ушли ли они? Авантюристы считают, что лишь на самой глубине
+                        Подземелья можно узнать ответ</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Совершенно бесплатно</div>
+                    <div class="card-body">Вам не нужно платить за игру. Абсолютно. Однако Вы можете поддержать
+                        разработчика добровольным пожертвованием</div>
+                </div>
+            </div>
+        </div>
+        <div class="page download" v-if='page == "download"'>
+            <div class="content flex ai-center ac-center text-center jc-center fx-wrap">
+                <h1 class='w-100'>На данный момент игра недоступна для скачивания. Ожидайте выхода игры</h1>
+                <a href="#" class="btn btn-dark btn-large btn-disabled">Загрузить</a>
+            </div>
+        </div>
+        <div class="page support"  v-if='page == "support"'>
+            <div class="content flex ai-center ac-center text-center jc-center fx-wrap">
+                <h1>Поддержать разработчика возможно будет после релиза игры</h1>
+            </div>
+        </div>
+        <footer class='footer' v-if='page != "home"'>
+            <img src="public/com/company.png" alt="">
+        </footer>
+        <footer class='footer-home' v-if='page == "home"'>
+            <img src="public/com/company.png" alt="">
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
