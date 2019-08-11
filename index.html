@@ -15,25 +15,35 @@
         <div class="loading" v-if='loading == true'><img src="public/com/loader_icon.png" alt="" class="loader"></div>
         <header class="header-home" v-if="page == 'home'">
             <img src="public/com/logo.png" alt="" class="logo">
-            <nav class="menu">
-                <a href="#home" class="menu-link" @click='page = "home"'>Главная</a>
-                <a href="#about" class="menu-link" @click='page = "about"'>Об игре</a>
-                <a href="#download" class="menu-link" @click='page = "download"'>Загрузить</a>
-                <a href="#support" class="menu-link" @click='page = "support"'>Поддержать</a>
+            <nav class="menu" v-bind:class='{mobShow: mobMenu}'>
+                <a href="#home" class="menu-link" @click='page = "home", mobMenu = false'>Главная</a>
+                <a href="#about" class="menu-link" @click='page = "about", mobMenu = false'>Об игре</a>
+                <a href="#download" class="menu-link" @click='page = "download", mobMenu = false'>Загрузить</a>
+                <a href="#support" class="menu-link" @click='page = "support", mobMenu = false'>Поддержать</a>
             </nav>
+            <div class="mob-menu" @click='mobMenu = true'>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </header>
         <header class="header" v-if='page != "home"'>
             <img src="public/com/logo.png" alt="" class="logo">
-            <nav class="menu">
-                <a href="#home" class="menu-link" @click='page = "home"'>Главная</a>
-                <a href="#about" class="menu-link" @click='page = "about"'>Об игре</a>
-                <a href="#download" class="menu-link" @click='page = "download"'>Загрузить</a>
-                <a href="#support" class="menu-link" @click='page = "support"'>Поддержать</a>
+            <nav class="menu" v-bind:class='{mobShow: mobMenu}'>
+                <a href="#home" class="menu-link" @click='page = "home", mobMenu = false'>Главная</a>
+                <a href="#about" class="menu-link" @click='page = "about", mobMenu = false'>Об игре</a>
+                <a href="#download" class="menu-link" @click='page = "download", mobMenu = false'>Загрузить</a>
+                <a href="#support" class="menu-link" @click='page = "support", mobMenu = false'>Поддержать</a>
             </nav>
+            <div class="mob-menu" @click='mobMenu = true'>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </header>
         <div class="page home" v-if='page == "home"'>
             <div class="content bg-dark flex ai-center jc-center">
-                <a href="#" class="btn btn-white btn-large" @click='page = "about"'>Войти в
+                <a href="#about" class="btn btn-white btn-large" @click='page = "about"'>Войти в
                     подземелье</a>
             </div>
         </div>

@@ -3,7 +3,8 @@ var app = new Vue({
     data: {
         page: "home",
         loading: true,
-        url: location.hash
+        url: location.hash,
+        mobMenu: false
     },
     mounted() {
         switch (this.url) {
